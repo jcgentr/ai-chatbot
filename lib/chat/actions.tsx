@@ -517,7 +517,7 @@ export const AI = createAI<AIState, UIState>({
       return
     }
   },
-  onSetAIState: async ({ state }) => {
+  onSetAIState: async ({ state }: { state: AIState }) => {
     'use server'
 
     const session = await auth()
